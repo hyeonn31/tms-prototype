@@ -3,6 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ============================================================
+   TMS Design System — Structured Clarity
+   Primary: Indigo #4F46E5 | Background: Cool Gray #F8F9FB
+   Typography: Inter (display/body)
+   ============================================================ */
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -43,74 +49,64 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  --radius: 0.5rem;
+
+  /* Brand Colors */
+  --primary: oklch(0.511 0.262 277.5);        /* Indigo #4F46E5 */
+  --primary-foreground: oklch(0.98 0 0);
+  --primary-hover: oklch(0.455 0.248 277.5);
+
+  /* Backgrounds */
+  --background: oklch(0.978 0.003 247);       /* Cool gray #F8F9FB */
+  --foreground: oklch(0.205 0.02 247);        /* Slate 900 */
+  --card: oklch(1 0 0);                       /* Pure white cards */
+  --card-foreground: oklch(0.205 0.02 247);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
+  --popover-foreground: oklch(0.205 0.02 247);
+
+  /* Neutrals */
+  --secondary: oklch(0.955 0.005 247);
+  --secondary-foreground: oklch(0.35 0.02 247);
+  --muted: oklch(0.955 0.005 247);
+  --muted-foreground: oklch(0.55 0.015 247);
+  --accent: oklch(0.945 0.015 277.5);         /* Light indigo tint */
+  --accent-foreground: oklch(0.511 0.262 277.5);
+
+  /* Semantic */
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
-}
+  --border: oklch(0.91 0.006 247);
+  --input: oklch(0.91 0.006 247);
+  --ring: oklch(0.511 0.262 277.5);
 
-.dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  /* Charts */
+  --chart-1: oklch(0.511 0.262 277.5);
+  --chart-2: oklch(0.6 0.2 200);
+  --chart-3: oklch(0.7 0.18 150);
+  --chart-4: oklch(0.75 0.2 80);
+  --chart-5: oklch(0.65 0.22 30);
+
+  /* Sidebar */
+  --sidebar: oklch(0.165 0.025 255);          /* Dark navy sidebar */
+  --sidebar-foreground: oklch(0.88 0.01 247);
+  --sidebar-primary: oklch(0.511 0.262 277.5);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --sidebar-accent: oklch(0.24 0.03 255);
+  --sidebar-accent-foreground: oklch(0.92 0.01 247);
+  --sidebar-border: oklch(0.28 0.025 255);
+  --sidebar-ring: oklch(0.511 0.262 277.5);
+
+  /* Custom TMS tokens */
+  --tms-status-todo-bg: oklch(0.96 0.005 247);
+  --tms-status-todo-text: oklch(0.45 0.015 247);
+  --tms-status-inprogress-bg: oklch(0.955 0.02 260);
+  --tms-status-inprogress-text: oklch(0.45 0.18 260);
+  --tms-status-review-bg: oklch(0.975 0.03 80);
+  --tms-status-review-text: oklch(0.5 0.15 65);
+  --tms-status-done-bg: oklch(0.965 0.04 155);
+  --tms-status-done-text: oklch(0.42 0.15 155);
+  --tms-status-hold-bg: oklch(0.97 0.03 25);
+  --tms-status-hold-text: oklch(0.5 0.2 25);
 }
 
 @layer base {
@@ -119,6 +115,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -134,24 +133,11 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
@@ -162,16 +148,77 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
+      padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      max-width: 1280px;
     }
+  }
+
+  /* TMS Custom Scrollbar */
+  .tms-scroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .tms-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .tms-scroll::-webkit-scrollbar-thumb {
+    background: oklch(0.82 0.006 247);
+    border-radius: 3px;
+  }
+  .tms-scroll::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.7 0.01 247);
+  }
+
+  /* Kanban column drag-over highlight */
+  .kanban-col-dragover {
+    background: oklch(0.945 0.015 277.5) !important;
+    border-color: oklch(0.511 0.262 277.5) !important;
+  }
+
+  /* Task card drag state */
+  .task-card-dragging {
+    opacity: 0.5;
+    transform: rotate(2deg) scale(1.02);
+  }
+
+  /* Drawer slide animation */
+  .drawer-enter {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  .drawer-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 280ms cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 200ms ease-out;
+  }
+  .drawer-exit {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .drawer-exit-active {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 220ms cubic-bezier(0.77, 0, 0.175, 1),
+                opacity 180ms ease-in;
+  }
+
+  /* Progress bar animation */
+  .progress-bar-fill {
+    transition: width 500ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  /* Button active state */
+  button:active:not(:disabled) {
+    transform: scale(0.97);
+    transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 }
